@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="descarga.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Tickets_TP_Integrador</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+      <style>
+        .navbar {
+          background-color: black;
+          height: 100px;
+        }
+      </style>
+  
+    <div class="container-fluid navbar-dark ">
+          <a class="navbar-brand w-25" href="#">Conferencia Bs As</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">La Conferencia</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="oradores.html">Los Oradores</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">El Lugar y La Fecha</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Conviértete en Orador</a>
+            </li>
+            <li class="nav-item bg-success">
+                <a class="nav-link" href="#comprar">Comprar Tickets</a>
+                
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav> 
+  </header>
+  <main>
+    <!-- Cards -->
+    <div class="container" style="padding-top:7rem;">
+      <div class="row justify-content-md-center g-4">
+        <div class="col-3" style="width: 17rem; height: 17rem;">
+          <div class="card border border-primary p-1 border-4">
+            <div class="card-body text-center">
+              <h3 class="card-title">Estudiante</h3>
+              <p class="card-text">tienen un descuento</p>
+              <p class="card-text fw-bold fs-2">80%</p>
+              <h6 class="card-subtutke mb-4 text-muted" style="font-size: 1rem;">* presentar documentación</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-3" style="width: 17rem; height: 17rem;">
+          <div class="card border border-success-subtle p-1 border-4">
+            <div class="card-body text-center">
+              <h3 class="card-title">Trainee</h3>
+              <p class="card-text">Tienen un descuento</p>
+              <p class="card-text fw-bold fs-2">50%</p>
+              <h6 class="card-subtitle mb-4 text-muted" style="font-size: 1rem;">* presentar documentación</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-3" style="width: 17rem; height: 17rem;">
+          <div class="card border border-warning p-1 border-4">
+            <div class="card-body text-center">
+              <h3 class="card-title">Junior</h3>
+              <p class="card-text">Tienen un descuento</p>
+              <p class="card-text fw-bold fs-2">15%</p>
+              <h6 class="card-subtitle mb-4 text-muted" style="font-size: 1rem;">* presentar documentación</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+   <!-- Frm -->
+    <div class="container w-50 pt10">
+       <!-- Parte superior del frm -->
+      <div class="text-center">
+        <p class="m-o fs-5"><sup>VENTA</sup>
+        <h3>VALOR DE TICKET $200</h3></p>
+        <!-- <p class="text-left">Comprar Tickets</p> -->
+      </div>
+    <div>
+      <p class="row text-left" id="comprar"></p>
+    </div>  
+<!-- Frm  datos-->
+      <form class="row g-1 gx-2 formulario" id="formulario">
+        <div class="col-md-6 mb-3">
+          <input type="text" class="form-control" placeholder="Nombre">
+        </div>
+        <div class="col-md-6 mb-3">
+          <input type="text" class="form-control" placeholder="Apellido">
+        </div>
+        <div class="mb-6">
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Correo">
+        </div>
+        <div class="col-md-6 mb-1">
+          <label for="cantidad" class="form-label">Cantidad</label>
+          <input type="number" class="form-control" id="cantidad" placeholder="Cantidad">
+        </div>
+        <div class="col-md-6 mb-1">
+          <label for="categoria" class="form-label">Categoría</label>
+          <select id="categoria" class="form-select">
+            <option value="">Sin Categoría</option>
+            <option value="estudiante">Estudiante</option>
+            <option value="trainee">Trainee</option>
+            <option value="junior">Junior</option>
+          </select>
+        </div>
+
+        <div class="mb-1">
+          <p class="alert alert-primary fw-bold" id="totalAPagar">Total a Pagar: $ </p>
+        </div>
+       
+        <div class="d-grid gap-2 col-2 mx-auto mb-1">
+          <button class="btn text-white fs-5 btnBorrar" style="background-color: #96c93e;" type="button" id="borrar">Borrar</button>
+        </div>
+        <div class="d-grid gap-2 col-2 mx-auto mb-1">
+          <button class="btn text-white fs-5 btnResumen" style=" background-color: #96c93e;"  type="button" id="resumen">Resumen</button>
+        </div>
+        <div class="d-grid gap- col-12 mt-5 background-color-white" >
+   
+        </div>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <div class="container-fluid bg-success fs-17rem mb-4 " style="padding: 20px">
+      <div class="row text-white text-center">
+      <div class="col-sm-2">Contáctenos</div>
+      <div class="col">Próximos Eventos</div>
+      <div class="col">Contribuir</div>
+      <div class="col">Historial</div>
+      <div class="col">Condiciones</div>
+    </div>
+  </footer>
+  <br><br>
+        
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+ <script src="scripts.js"></script>
+</body>
+</html>
